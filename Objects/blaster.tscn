@@ -41,7 +41,6 @@ animations = [{
 }]
 
 [node name="Blaster" type="Node2D"]
-scale = Vector2(1, 5)
 script = ExtResource("1_k21t1")
 
 [node name="GasterBlaster" type="AnimatedSprite2D" parent="."]
@@ -66,7 +65,7 @@ offset = Vector2(-11.5, 12.5)
 one_shot = true
 
 [node name="VSN" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(321.5, 241.5)
-scale = Vector2(32.15, 24.45)
+scale = Vector2(1e-05, 1e-05)
+rect = Rect2(0, 0, 0, 0)
 
 [connection signal="timeout" from="TimerIdle" to="." method="_on_timer_idle_timeout"]

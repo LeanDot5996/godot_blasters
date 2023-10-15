@@ -7,7 +7,7 @@ var beamsfx_a = preload("res://Sounds/mus_sfx_a_gigatalk.wav")
 var ideal_pos: Vector2	# Ideal Position
 var ideal_rot: float	# Ideal Rotation
 var pause: float = 0.3	# Blaster Pause
-var end: float = 8		# Blaster End
+var end: float = 8	    # Blaster End
 
 var spd: float	 # Leaving Speed
 var bt: float	 # Blaster Timer
@@ -45,12 +45,12 @@ func _process(delta):
 			
 			if bt < 5:
 				spd += 1
-#				bs += ((scale.x * 0.9)/(scale.x * 2.5))
+				# bs += ((scale.x * 0.9)/(scale.x * 2.5))
 				bs += ((scale.x)/scale.x*0.38)
 			else:
 				spd += 4
 				bw = ((sin((bt / 1.5)) * bs) / 4)
-			if (bt > 50 && $VSN.is_on_screen() == false): spd = 0
+			if (bt > 40 && $VSN.is_on_screen() == false): spd = 0
 			if (bt > (5 + end)):
 				bs *= 0.8
 				$GasterBlaster/Beam.modulate.a -= 0.1

@@ -27,4 +27,4 @@ func _input(event):
 
 func _process(delta):
 	var fps: float = Engine.get_frames_per_second()
-	$FPSLabel.text = "FPS: " + str(fps) + "\n" + "Sounds: " + str(AudioManager.get_child_count())
+	$Label.text = "FPS: " + str(fps) + "\n" + "Sounds: " + str(AudioManager.get_child_count())
