@@ -1,8 +1,0 @@
-[gd_resource type="AudioBusLayout" load_steps=2 format=3 uid="uid://bfar5df3mjh4y"]
-
-[sub_resource type="AudioEffectCompressor" id="AudioEffectCompressor_dwa3f"]
-resource_name = "Compressor"
-
-[resource]
-bus/0/effect/0/effect = SubResource("AudioEffectCompressor_dwa3f")
-bus/0/effect/0/enabled = false

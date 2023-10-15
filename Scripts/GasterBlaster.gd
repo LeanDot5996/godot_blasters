@@ -16,7 +16,7 @@ var bw: float	 # Beam Wave
 var con: int = 1 # Continuity
 
 func _ready():
-	AudioManager.play(beam_up_sfx,"BeamUp", 1.2, -4)
+	AudioManager.play(beam_up_sfx, 1.2, -4)
 
 func _process(delta):
 	match con:
@@ -32,8 +32,8 @@ func _process(delta):
 			rotation_degrees = ideal_rot
 		3: #Blast
 			if ($GasterBlaster.animation == "beam_up" && $GasterBlaster.frame == 3):
-				AudioManager.play(beamsfx, "Blast1", 1.2, -4)
-				AudioManager.play(beamsfx_a, "Blast2", 1.2, -8)
+				AudioManager.play(beamsfx, 1.2, -4)
+				AudioManager.play(beamsfx_a, 1.2, -8)
 				$GasterBlaster/Beam.visible = true
 				con = 4
 		4: #Post-Blast

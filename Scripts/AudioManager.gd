@@ -2,7 +2,7 @@ extends Node
 
 var sfx: Array
 
-func play(snd,name:String,pitch:float,vol:float):
+func play(snd,pitch:float,vol:float):
 	var p = AudioStreamPlayer.new()
 	p.stream = snd
 	if sfx.has(p.stream):

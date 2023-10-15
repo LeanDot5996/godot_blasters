@@ -1,7 +1,7 @@
 extends Node2D
 
 func create_blaster(x, y, angle, end=8, pos=Vector2.ZERO, scale=Vector2.ONE):
-	var gb = load("res://blaster.tscn")
+	var gb = load("res://Objects/blaster.tscn")
 	var gbc = gb.instantiate()
 	gbc.set("ideal_pos", Vector2(x,y))
 	gbc.set("ideal_rot", angle)

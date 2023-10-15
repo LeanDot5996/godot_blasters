@@ -15,7 +15,11 @@ run/main_scene="res://test_field.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 run/max_fps=30
 boot_splash/show_image=false
-config/icon="res://UNDERTALE.png"
+config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout=""
 
 [autoload]
 
