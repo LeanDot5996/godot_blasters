@@ -14,7 +14,7 @@ func play(snd,pitch:float,vol:float):
 	p.play()
 	p.finished.connect(_on_stream_finished.bind(p))
 	sfx.append(p.stream)
-	
+
 func repeat_sound(sound):
 	for node in get_children():
 		if node.stream == sound:

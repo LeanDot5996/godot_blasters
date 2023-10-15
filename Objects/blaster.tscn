@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://d25shf0mwo5ri" path="res://Sprites/spr_gasterblaster_3.png" id="5_72o80"]
 [ext_resource type="Texture2D" uid="uid://dd6ve8qc3thh4" path="res://Sprites/spr_gasterblaster_4.png" id="6_udu4g"]
 [ext_resource type="Texture2D" uid="uid://ccabctxxeqw20" path="res://Sprites/spr_gasterblaster_5.png" id="7_j4kie"]
-[ext_resource type="Texture2D" uid="uid://dydwykrsu7xc7" path="res://Sprites/Bean.png" id="8_mebx4"]
+[ext_resource type="Texture2D" uid="uid://6chmuh6mxcev" path="res://Sprites/Beam.png" id="8_fvpt7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pwlj2"]
 animations = [{
@@ -55,17 +55,15 @@ animation = &"beam_up"
 visible = false
 texture_filter = 1
 texture_repeat = 1
-position = Vector2(0, 8.5)
-scale = Vector2(1e-05, 1)
-texture = ExtResource("8_mebx4")
+position = Vector2(0.5, 25)
+scale = Vector2(1e-05, 1.5)
+texture = ExtResource("8_fvpt7")
 centered = false
-offset = Vector2(-11.5, 12.5)
+offset = Vector2(-12, 0)
 
 [node name="TimerIdle" type="Timer" parent="."]
 one_shot = true
 
 [node name="VSN" type="VisibleOnScreenNotifier2D" parent="."]
-scale = Vector2(1e-05, 1e-05)
-rect = Rect2(0, 0, 0, 0)
 
 [connection signal="timeout" from="TimerIdle" to="." method="_on_timer_idle_timeout"]

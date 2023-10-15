@@ -12,7 +12,7 @@ func create_blaster(x, y, angle, end=8, pos=Vector2.ZERO, scale=Vector2.ONE):
 
 func _input(event):
 	if (Input.is_action_pressed("z") == true):
-		create_blaster(randf_range(0, 640), randf_range(0, 480), randf_range(0, 360), 1, Vector2.ZERO, Vector2(0.5,1))
+		create_blaster(randf_range(0, 640), randf_range(0, 480), randf_range(0, 360), 2, Vector2.ZERO, Vector2(0.5,1))
 	elif (Input.is_action_pressed("1")):
 		create_blaster(250, 150, 0)
 		create_blaster(150, 250, -90)
