@@ -47,11 +47,12 @@ func _process(delta):
 			if bt < 5:
 				spd += 1
 				# bs += ((scale.x * 0.9)/(scale.x * 2.5))
-				bs += ((scale.x)/scale.x*0.38)
+				# bs += ((scale.x)/scale.x*0.38)
+				bs += (scale.x/scale.x)/2.5
 			else:
 				spd += 4
 				bw = ((sin((bt / 1.5)) * bs) / 4)
-			if (bt > 20 && $VSN.is_on_screen() == false): spd = 0
+			if $VSN.is_on_screen() == false: spd = 0
 			if (bt > (5 + end)):
 				bs *= 0.8
 				beam.modulate.a -= 0.1
